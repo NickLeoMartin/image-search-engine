@@ -1,0 +1,4 @@
+Django==2.0.5
+numpy==1.14.3
+opencv-python==3.4.0.12
+pytz==2018.4
