@@ -1,11 +1,12 @@
 import glob
 import cv2
+import os
 
 from ml_models.color_descriptor import *
 from match.models import *
 
 ## Change to read in from config file
-dataset_path = '/dataset/'
+dataset_path = "%s/%s"%(os.getcwd(),'dataset/')
 
 ## Initialise ColorDescriptor
 cd = ColorDescriptor((8, 12, 3))

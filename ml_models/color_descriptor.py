@@ -24,9 +24,9 @@ class ColorDescriptor:
         segments = [(0,cX,0,cY),(cX,w,0,cY),(cX,w,cY,h),(0,cX,cY,h)]
 
         """ Construct an elliptical mask representing the center of the image """
-        (axesX,axesY) = (int(w*0.75)/2,int(h*0.75)/2)
+        (axesX,axesY) = (int(int(w*0.75)/2),int(int(h*0.75)/2))
         ellipMask = np.zeros(image.shape[:2],dtype='uint8')
-        cv2.ellipse(ellipMask,(cX,cY),(axesX,axesY),0,0,360,255,-1)
+        cv2.ellipse(ellipMask,(cX,cY),(axesX,axesY),0.0,0.0,360,255,-1)
 
         """ Loop over segments """
         for (startX, endX, startY, endY) in segments:
