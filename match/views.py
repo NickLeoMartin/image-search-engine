@@ -36,7 +36,7 @@ class SearchResultsView(ListView):
 		topn_ids = sim_model.obtain_similarity()
 
 		## Filter by topn_ids
-		similar_images = Image.objects.filter(id__in=topn_ids)
+		similar_images = [Image.objects.get(id=top_id) for top_id in topn_ids]
 
 		## Return images
 		return similar_images
