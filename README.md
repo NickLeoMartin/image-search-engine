@@ -1,5 +1,5 @@
 # image-search-engine
-Toy image search engine embedded in Django site
+Toy image search engine using the [INRIA Holidays Dataset](http://lear.inrialpes.fr/~jegou/data.php#holidays). 
 
 To-do
 -----
