@@ -6,12 +6,14 @@
 <body>
 
 <div>
-
-	<img src="/media/img/100900.jpg"\>
-
+	<h5>A simple image search engine</h5>
+	<ul>
 	{% for img in images %}
-		<img src="{{img.img_file.url}}"\>
+		<li>
+			<img src="{{img.img_file.url}}" style="width: 30%; height: 30%" href="{{img.id}}" \>
+		</li>
 	{% endfor %}
+	</ul>
 </div>
 </body>
 </html>
