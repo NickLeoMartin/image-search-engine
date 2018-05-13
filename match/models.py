@@ -9,8 +9,8 @@ IMAGECHOICES = (('dataset', 'dataset'),('uploaded','uploaded'))
 class Image(models.Model):
 	""" Model to store path to images and features """
 	img_id = models.IntegerField(default=-1)
-	img_file = models.ImageField(upload_to=None)
-	img_features = PickledObjectField(default=0)
+	img_file = models.ImageField(upload_to="img")
+	img_features = PickledObjectField(default=None)
 	img_type = models.CharField(max_length=100,default='dataset',choices=IMAGECHOICES)
 
 	def __str__(self):
