@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<div>
+	<h5>Search Results</h5>
+	<ul>
+	{% for img in similar_images %}
+		<li>
+			<img src="{{img.img_file.url}}" style="width: 30%; height: 30%" href="{{img.id}}" \>
+		</li>
+	{% endfor %}
+	</ul>
+</div>
+
+</body>
+</html>

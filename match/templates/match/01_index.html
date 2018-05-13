@@ -10,7 +10,8 @@
 	<ul>
 	{% for img in images %}
 		<li>
-			<img src="{{img.img_file.url}}" style="width: 30%; height: 30%" href="{{img.id}}" \>
+			<img src="{{img.img_file.url}}" style="width: 30%; height: 30%" href="/results/{{img.id}}" \>
+			<a class="button" href="results/{{img.id}}"> Click on image #{{img.id}}</a>
 		</li>
 	{% endfor %}
 	</ul>
